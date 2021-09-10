@@ -1,5 +1,7 @@
 function reverseString(str) {
-  if (typeof str !== "String") return "Please enter a string!";
+  if (typeof str !== "string") {
+    return "Please enter a string!";
+  }
 
   let reversed = "";
 

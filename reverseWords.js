@@ -8,7 +8,7 @@ function reverse(str, start, end) {
     // and last character
     temp = str[start]; // temp = hello
     str[start] = str[end]; // start = world
-    str[end] = temp; // end = hellp
+    str[end] = temp; // end = hello
     start++;
     end--;
   }
@@ -26,7 +26,7 @@ function reverseWords(s) {
     // word (word between
     // the indexes start and end-1
     // i.e., s[start..end-1]
-    if (s[end] == " ") {
+    if (s[end] === " ") {
       reverse(s, start, end);
       start = end + 1;
     }
@@ -39,4 +39,4 @@ function reverseWords(s) {
   return s.join("");
 }
 
-reverse("hello world"); // worldhello
+reverseWords("hello world"); // worldhello

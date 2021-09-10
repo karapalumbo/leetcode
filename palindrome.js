@@ -1,5 +1,5 @@
 var isPalindrome = function (x) {
-  let str = parseInt(x.toString().split("").reverse().join("").toString());
+  let str = x.split("").reverse().join("");
 
   if (x === str) {
     return true;
