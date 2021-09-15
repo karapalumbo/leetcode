@@ -14,6 +14,8 @@ function fizzBuzz() {
 
 fizzBuzz();
 
+// ---------------------------------------
+
 const fizzBuzz = function (n) {
   let answer = new Array(n); // turns number into array
 

@@ -3,14 +3,13 @@ function ListNode(val) {
   this.next = null;
 }
 // write function that creates a list
-
 var mergeTwoLists = function (l1, l2) {
-  // create new list
+  // create new list with val = 0
   let newList = new ListNode(0);
-  // set list to a new variable
+  // set head of list to a new variable
   let headOfNewList = newList;
 
-  // while each list is null
+  // while each list is not null
   while (l1 != null && l2 != null) {
     // if first linked list val is less than second linked list val
     if (l1.val < l2.val) {
@@ -37,7 +36,6 @@ var mergeTwoLists = function (l1, l2) {
   // return the second variable's next
   return headOfNewList.next;
 };
-
 // CREATE YOUR 2 LINKED LISTS
 const l1A = new ListNode(1);
 const l1B = new ListNode(2);
