@@ -1,7 +1,7 @@
 var strStr = function (haystack, needle) {
-  if (needle === "") return 0;
-  if (haystack === "") return -1;
-
+  if (haystack === "") return -1; // return -1 if no string
+  if (needle === "") return 0; // return 0 if no substring
+ 
   if (haystack.includes(needle)) {
     return haystack.indexOf(needle);
   } else {
@@ -9,5 +9,5 @@ var strStr = function (haystack, needle) {
   }
 };
 
-let s = strStr("hello", "");
-console.log(s);
+let s = strStr("hello", "ll");
+console.log(s); // 2

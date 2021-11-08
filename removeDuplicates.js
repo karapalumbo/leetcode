@@ -1,20 +1,9 @@
 var removeDuplicates = function (nums) {
-  if (nums.length === 0) {
-    return;
-  }
-  let i = 0;
-  let j = 1;
-
-  while (j <= nums.length) {
-    if (nums[j] !== nums[i]) {
-      i++;
-      nums[i] = nums[j];
-      j++;
-    } else {
-      j++;
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === nums[i + 1]) {
+      nums.splice(i + 1, 1); // at index i + 1, remove 1 item
+      removeDuplicates(nums); // call function until there are no more nums left
     }
   }
-  return i + 1;
+  return nums;
 };
-
-removeDuplicates([1, 1, 2, 3, 4]);

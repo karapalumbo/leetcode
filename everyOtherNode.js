@@ -4,10 +4,10 @@ function LinkedList(val) {
 }
 
 function push(head, newData) {
-  var newNode = new LinkedList();
-  newNode.val = newData;
-  newNode.next = head;
-  head = newNode;
+  var node = new LinkedList();
+  node.val = newData;
+  node.next = head;
+  head = node;
   return head;
 }
 

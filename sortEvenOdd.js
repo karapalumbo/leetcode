@@ -14,5 +14,4 @@ const evenOdd = (arr) => {
   return even.concat(odd);
 };
 
-evenOdd(nums);
 console.log(evenOdd(nums));

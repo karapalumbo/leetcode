@@ -8,11 +8,11 @@ const checkVowelLength = function (str) {
   };
 
   let vowelArr = [];
-  let splitStr = str.split("");
-  let strLength = splitStr.length;
-  let half = strLength / 2;
+  let splitStr = str.split(""); // 'p', 'i', 'l', 'l', 'o', 'w'
+  let strLength = splitStr.length; // 6
+  let half = strLength / 2; // 3
 
-  for (let i = 0; i < splitStr.length; i++) {
+  for (let i = 0; i < strLength; i++) {
     if (splitStr[i] === hashArr[splitStr[i]]) {
       vowelArr.push(hashArr[splitStr[i]]);
     }
@@ -26,4 +26,8 @@ const checkVowelLength = function (str) {
   }
 };
 
-console.log(checkVowelLength("candy"));
+console.log(checkVowelLength("pillow")); // false
+
+// find the vowels in a string
+// if the string has more than 50% vowels, return true
+// else return false.

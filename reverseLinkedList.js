@@ -4,21 +4,17 @@ function ListNode(val) {
   this.next = null;
 }
 
-var reverseLinkedList = function (linkedlist) {
-  var node = linkedlist; // ListNode
-  var previous = null;
+const reverseLinkedList = function (head) {
+  let node = head;
+  let previous = null;
 
-  while (node) {
-    // save next or you lose it!!!
-    var save = node.next;
-    // reverse pointer
-    node.next = previous;
-    // increment previous to current node
-    previous = node;
-    // increment node to next node or null at end of list
-    node = save;
+  while (node) { // while node exists 
+    let nxt = node.next; // save next or it's lost 
+    node.next = previous; // node.next = null
+    previous = node; // previous = node 
+    node = nxt; // node = node.next
   }
-  return previous; // Change the list head !!!
+  return previous; // Change the list head
 };
 
 const l1A = new ListNode(1);

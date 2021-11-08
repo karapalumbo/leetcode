@@ -16,11 +16,13 @@ fizzBuzz();
 
 // ---------------------------------------
 
+// takes a number param 
+
 const fizzBuzz = function (n) {
   let answer = new Array(n); // turns number into array
 
-  for (let i = 1; i <= n; i++) {
-    // loop over array
+  for (let i = 1; i <= n; i++) { 
+    // loop over array starting at 1 (don't count 0)
     if (i % 3 === 0 && i % 5 === 0) {
       answer[i - 1] = "FizzBuzz";
     } else if (i % 3 === 0) {
@@ -34,4 +36,4 @@ const fizzBuzz = function (n) {
   return answer;
 };
 
-fizzBuzz(3); // ["1","2","Fizz"]
+fizzBuzz(5); // ["1","2","Fizz","4","Buzz"]

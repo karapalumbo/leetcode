@@ -1,17 +1,17 @@
 var reverse = function (x) {
-  // convert x to a string  // '123'
-  // split the string '1','2','3'
-  // reverse the string '3','2','1'
-  // change string back to number
-  let ans = parseInt(x.toString().split("").reverse().join("").toString());
+  let str = x.toString(); // convert to a string  // '123'
+  let splitStr = str.split(""); // split the string '1','2','3'
+  let reverseStr = splitStr.reverse(); // reverse the string '3','2','1'
+  let joinStr = reverseStr.join(""); // join string back
 
-  // if 123 < 0
+  let num = parseInt(joinStr); // change string back to number
+  let ans = num;
+
   if (x < 0) {
-    // then... 321 = 321 * -1 (answer doesn't include the -)
-    ans *= -1;
+    // if negative (negative nums are less than 0)
+    ans *= -1; // multiply the number by -1 so it returns the negative sign
   }
 
-  // if 321 < 2^32 * -1 OR 321 > 2^31 - 1, return 0
-  if (ans < Math.pow(2, 31) * -1 || ans > Math.pow(2, 31) - 1) return 0;
+  // if (ans < Math.pow(2, 31) * -1 || ans > Math.pow(2, 31) - 1) return 0;
   return ans;
 };

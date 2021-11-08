@@ -3,3 +3,4 @@ var findVowel = function (letter) {
 };
 
 console.log(findVowel("y"));
+// false

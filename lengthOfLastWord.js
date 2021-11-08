@@ -1,24 +1,12 @@
 var lengthOfLastWord = function (s) {
-  let arr = s.split(" ");
-  let newArr = arr.filter((e) => e);
-  let lastWord = newArr.pop();
-  let length = lastWord.length;
-  return length;
-};
+  let arr = s.split(" "); // ["hello", "how", "you", "", ""]
 
-lengthOfLastWord("hello world  there "); // 5
-
-// ---------------------------------
-
-var lengthOfLastWord = function (s) {
-  let arr = s.split(" ");
-
-  for (let i = arr.length - 1; i >= 0; i--) {
-    if (arr[i].length >= 1) {
-      return arr[i].length;
+  for (let i = arr.length - 1; i >= 0; i--) { // loop backwards 
+    if (arr[i].length >= 1) { // if length of last word >= 1
+      return arr[i].length; // return the length 
     }
   }
 };
 
-let str = lengthOfLastWord("hello you");
+let str = lengthOfLastWord("hello how you  ");
 console.log(str); // 3

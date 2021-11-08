@@ -1,41 +1,31 @@
-function ListNode(val) {
+function ListNode(val) { // write function that creates a list
   this.val = val;
   this.next = null;
 }
-// write function that creates a list
-var mergeTwoLists = function (l1, l2) {
-  // create new list with val = 0
-  let newList = new ListNode(0);
-  // set head of list to a new variable
-  let headOfNewList = newList;
 
-  // while each list is not null
-  while (l1 != null && l2 != null) {
-    // if first linked list val is less than second linked list val
-    if (l1.val < l2.val) {
-      // set the new list's next to the first linked
-      newList.next = l1;
-      // set the first list to first list's next
-      l1 = l1.next;
-    } else {
-      // else do the opposite
+var mergeTwoLists = function (l1, l2) { 
+  let newList = new ListNode(0); // create new list with val = 0
+  let head = newList; // save head 
+
+
+  while (l1 != null && l2 != null) { 
+    if (l1.val < l2.val) { 
+      newList.next = l1; 
+      l1 = l1.next; 
+    } else { 
       newList.next = l2;
       l2 = l2.next;
     }
-    // set the new list to be the new list's next
-    newList = newList.next;
+    newList = newList.next; 
   }
-  // if first list is null
-  if (l1 == null) {
-    // new list's next is second list
-    newList.next = l2;
-  } else {
-    // else opposite
+  if (l1 == null) { 
+    newList.next = l2; 
+  } else { 
     newList.next = l1;
   }
-  // return the second variable's next
-  return headOfNewList.next;
+  return head.next; 
 };
+
 // CREATE YOUR 2 LINKED LISTS
 const l1A = new ListNode(1);
 const l1B = new ListNode(2);

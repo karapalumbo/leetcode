@@ -13,15 +13,14 @@ function romanToInt(s) {
   let splitArr = s.split("");
 
   for (let i = 0; i < splitArr.length; i++) {
-    let currentVal = romanNumerals[splitArr[i]]; // I = 1
-    let nextVal = romanNumerals[splitArr[i + 1]]; // X = 10
+    let currentVal = romanNumerals[splitArr[i]]; // 1
+    let nextVal = romanNumerals[splitArr[i + 1]]; // 10
     if (currentVal < nextVal) {
       // If 1 < 10
-      // add 10 to nums
-      nums += nextVal - currentVal; // subtract the values
-      i++; // break out of loop??
+      nums += nextVal - currentVal; // 10-1 = nums
+      i++; // increment index to go to next element
     } else {
-      nums += currentVal; // else add the values
+      nums += currentVal; // else nums is the current val
     }
   }
   return nums;
