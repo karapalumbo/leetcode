@@ -16,7 +16,7 @@ const countingSort = (arr) => {
 };
 
 console.log(countingSort([1, 2, 3, 2]));
-// [0, 1, 2, 1, 0, 0, 0, 0...]
+// [0, 1, 2, 0, 0, 0, 0, 0...]
 //  no 0's, one 1, two 2's, no 3's...
 
 // Create an integer array whose index range covers the entire range of values

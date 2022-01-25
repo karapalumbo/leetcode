@@ -3,9 +3,8 @@ function staircase(n) {
 
   // keep track of overall number of rows (n)
   for (let i = 1; i <= n; i++) {
-
     // Keep track of the preceding spaces on each line
-    // s should start out at n-1 
+    // s should start out at n-1
     // s should be greater than or equal to i because the number of spaces decreases as i increases
     for (let s = n - 1; s >= i; s--) {
       output += " ";
@@ -20,7 +19,6 @@ function staircase(n) {
     // new line
     output += "\n";
   }
-  // log the final result
   console.log(output);
 }
 
@@ -29,4 +27,3 @@ staircase(3);
 // row 1 //   #
 // row 2 //  ##
 // row 3 // ###
- 
